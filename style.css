@@ -1,0 +1,1587 @@
+/* =========================================
+   1. RESET Y BASE
+   ========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    background-color: #f5f5f5;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* =========================================
+   2. BARRA SUPERIOR INSTITUCIONAL (LOGOS)
+   ========================================= */
+.header-institucional {
+    background-color: #fff;
+    padding: 15px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    border-bottom: 3px solid #1a3a5c; /* Borde azul inferior */
+    flex-wrap: wrap;
+}
+
+.header-institucional img {
+    height: 60px;
+    object-fit: contain;
+}
+
+.header-institucional img.logo-ito {
+    height: 65px;
+}
+
+/* =========================================
+   3. BARRA DE NAVEGACION (MENU AZUL)
+   ========================================= */
+.nav-bar {
+    background-color: #1a3a5c; /* Fondo azul oscuro */
+    padding: 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    width: 100%;
+}
+
+.nav-bar > ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.nav-bar > ul > li {
+    flex: 1;
+}
+
+.nav-bar > ul > li > a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 14px 15px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    border-bottom: 4px solid transparent;
+}
+
+/* Clase para la pestaña activa actual */
+.nav-bar > ul > li > a.active {
+    background-color: #2a5a8c;
+    border-bottom: 4px solid #e8a020;
+    font-weight: 700;
+}
+
+/* ── Dropdown submenu ── */
+.nav-dropdown {
+    position: relative;
+}
+
+.nav-dropdown.open > a {
+    background-color: #1a3a5c;
+    border-bottom: 4px solid #e8a020;
+}
+
+.nav-submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    width: 100%;
+    list-style: none;
+    padding: 6px 0;
+    margin: 0;
+    z-index: 1100;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+    border-top: 3px solid #e8a020;
+}
+
+.nav-dropdown.open .nav-submenu {
+    display: block;
+}
+
+.nav-submenu li {
+    flex: none;
+}
+
+.nav-submenu li a {
+    display: block;
+    padding: 13px 20px;
+    color: #1a3a5c;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    border-bottom: none;
+    text-align: left;
+}
+
+/* =========================================
+   4. ESTILOS DE PAGINA: INICIO (HERO)
+   ========================================= */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 500px; /* Altura fija */
+    overflow: hidden;
+    background-color: #1a3a5c; /* Color de fondo por si no carga la imagen */
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        to bottom,
+        rgba(26, 58, 92, 0.6) 0%,
+        rgba(26, 58, 92, 0.4) 50%,
+        rgba(26, 58, 92, 0.8) 100%
+    );
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.hero-overlay h1 {
+    color: #fff;
+    font-size: 42px;
+    font-weight: 700;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
+    margin-bottom: 10px;
+}
+
+.hero-overlay p {
+    color: #f0f0f0;
+    font-size: 22px;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+}
+
+/* =========================================
+   5. SECCIONES DE CONTENIDO GENERAL
+   ========================================= */
+.content-section {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 30px;
+    flex: 1; /* Para que empuje el footer hacia abajo si hay poco contenido */
+}
+
+.content-section h2 {
+    color: #1a3a5c;
+    font-size: 28px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e8a020;
+}
+
+.content-section p {
+    font-size: 16px;
+    color: #444;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+/* Visión, Misión y Objetivos */
+.vision-objetivos {
+    margin-top: 40px;
+}
+
+.vision-objetivos .bloque {
+    background: #fff;
+    border-left: 5px solid #e8a020;
+    padding: 25px 30px;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    border-radius: 0 5px 5px 0;
+}
+
+.vision-objetivos .bloque h3 {
+    color: #1a3a5c;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+/* =========================================
+   6. ESTILOS DE PAGINA: CONVOCATORIAS
+   ========================================= */
+.convocatorias-container {
+    max-width: 1200px;
+    width: 95%;
+    margin: 40px auto;
+    padding: 0 30px;
+    box-sizing: border-box;
+}
+
+.convocatorias-container h2 {
+    color: #1a3a5c;
+    font-size: 28px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e8a020;
+}
+
+.convocatoria-intro-texto {
+    padding: 10px 0 20px 0;
+    margin-bottom: 10px;
+}
+
+.convocatoria-intro-texto p {
+    color: #444;
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 10px;
+}
+
+.convocatoria-intro-texto p:last-child {
+    margin-bottom: 0;
+}
+
+.convocatoria-intro-texto ul {
+    margin: 5px 0 0 25px;
+    color: #444;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.convocatoria-intro-texto li {
+    margin-bottom: 4px;
+}
+
+.convocatoria-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-left: 6px solid #1a3a5c;
+    margin-bottom: 25px;
+    overflow: hidden;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.06);
+    border-radius: 4px;
+}
+
+.convocatoria-header {
+    padding: 20px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.convocatoria-header h3 {
+    color: #1a3a5c;
+    font-size: 18px;
+    margin: 0;
+    flex: 1;
+}
+
+.convocatoria-header .tag {
+    background-color: #e8a020;
+    color: #fff;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-left: 15px;
+    white-space: nowrap;
+}
+
+.convocatoria-toggle {
+    display: inline-block;
+    background-color: #1a3a5c;
+    color: #fff;
+    padding: 8px 18px;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 600;
+    margin-left: 15px;
+    cursor: pointer;
+    white-space: nowrap;
+    border: none;
+}
+
+/* Cuerpo de la convocatoria (Oculto por defecto) */
+.convocatoria-body {
+    display: none; /* Oculto */
+    padding: 0 30px 30px 30px;
+    border-top: 1px solid #eee;
+    background-color: #fff;
+}
+
+/* Clase para mostrar el cuerpo */
+.convocatoria-body.open {
+    display: block; /* Visible */
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.convocatoria-body h4 {
+    color: #1a3a5c;
+    font-size: 17px;
+    margin: 25px 0 15px 0;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #e8a020;
+    font-weight: 700;
+}
+
+.convocatoria-body ul, .convocatoria-body ol {
+    margin: 10px 0 15px 25px;
+    color: #555;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.convocatoria-body li {
+    margin-bottom: 5px;
+}
+
+/* Tablas dentro de convocatorias */
+.tabla-proceso {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 14px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.tabla-proceso thead th {
+    background-color: #1a3a5c;
+    color: #fff;
+    padding: 12px 15px;
+    text-align: left;
+    font-weight: 600;
+}
+
+.tabla-proceso tbody td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #eee;
+    color: #555;
+    vertical-align: top;
+    background-color: #fff;
+}
+
+.tabla-proceso tbody tr:nth-child(even) td {
+    background-color: #f9f9f9;
+}
+
+.proyecto-categoria {
+    color: #1a3a5c;
+    font-weight: 700;
+    font-size: 15px;
+    margin: 15px 0 5px 0;
+    text-transform: uppercase;
+    background: #f0f4f8;
+    padding: 5px 10px;
+    display: inline-block;
+    border-radius: 3px;
+}
+
+/* =========================================
+   7. ESTILOS DE PAGINA: PLAN DE ESTUDIOS
+   ========================================= */
+.plan-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-top: 30px;
+}
+
+@media (max-width: 900px) {
+    .plan-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 550px) {
+    .plan-grid { grid-template-columns: 1fr; }
+}
+
+.semestre-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+}
+
+.semestre-tesis {
+    justify-content: flex-start;
+}
+
+.semestre-header {
+    background-color: #1a3a5c;
+    color: #fff;
+    padding: 18px 15px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    border-bottom: 4px solid #e8a020;
+}
+
+.materia-principal {
+    padding: 20px 20px 12px;
+    text-align: center;
+    font-size: 13px;
+    color: #1a3a5c;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    line-height: 1.5;
+}
+
+.materia-principal .creditos {
+    display: block;
+    font-weight: 400;
+    color: #999;
+    font-size: 13px;
+    text-transform: none;
+    letter-spacing: 0;
+    margin-top: 4px;
+}
+
+.tesis-titulo {
+    font-size: 16px;
+    padding: 50px 20px 10px;
+}
+
+.materia-divisor {
+    border: none;
+    border-top: 1px solid #e8e8e8;
+    margin: 0 20px 5px;
+}
+
+.materia-list {
+    list-style: none;
+    padding: 5px 20px 15px;
+    margin: 0;
+}
+
+.materia-list li {
+    padding: 12px 0;
+    border-bottom: 1px solid #f0f0f0;
+    color: #333;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+.materia-list li:last-child {
+    border-bottom: none;
+}
+
+.bullet-dorado {
+    color: #e8a020;
+    font-size: 10px;
+    flex-shrink: 0;
+}
+
+.info-adicional {
+    margin-top: 50px;
+    background: #fff;
+    padding: 30px;
+    border-left: 5px solid #1a3a5c;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.info-adicional h3 {
+    color: #1a3a5c;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.info-adicional ul {
+    margin-left: 20px;
+    color: #555;
+}
+
+/* =========================================
+   8. PAGINAS PLACEHOLDER (NUCLEO/EGRESADOS)
+   ========================================= */
+.placeholder-page {
+    max-width: 800px;
+    margin: 60px auto;
+    padding: 60px 30px;
+    background: #fff;
+    border: 1px dashed #ccc;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.placeholder-page h2 {
+    color: #1a3a5c;
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.placeholder-page p {
+    color: #888;
+    font-size: 18px;
+}
+
+/* =========================================
+   INVESTIGACION - TABS
+   ========================================= */
+.investigacion-section {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.investigacion-section h2 {
+    color: #1a3a5c;
+    font-size: 28px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.inv-tabs {
+    display: flex;
+    border-bottom: 3px solid #1a3a5c;
+    margin-bottom: 30px;
+}
+
+.inv-tab-btn {
+    padding: 12px 30px;
+    background: none;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #555;
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+    margin-bottom: -3px;
+}
+
+.inv-tab-btn.active {
+    color: #1a3a5c;
+    border-bottom-color: #e8a020;
+}
+
+.inv-tab-content {
+    display: none;
+    background: #fff;
+    border-radius: 8px;
+    padding: 40px 30px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    min-height: 200px;
+}
+
+.inv-tab-content.active {
+    display: block;
+}
+
+.inv-placeholder {
+    color: #888;
+    font-size: 17px;
+    text-align: center;
+}
+
+/* =========================================
+   9. FOOTER (PIE DE PAGINA)
+   ========================================= */
+.footer {
+    background-color: #1a3a5c;
+    color: #ccc;
+    padding: 50px 30px 20px;
+    margin-top: auto; /* Empuja el footer al final */
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.footer-info {
+    flex: 1;
+    min-width: 280px;
+}
+
+.footer-info h3 {
+    color: #e8a020;
+    font-size: 18px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.footer-info p {
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #d0d0d0;
+    line-height: 1.6;
+}
+
+.footer-info .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    color: #d0d0d0;
+    font-size: 14px;
+}
+
+.footer-info .contact-item .icon-label {
+    color: #e8a020;
+    font-weight: 700;
+    min-width: 60px;
+}
+
+.footer-map {
+    flex: 1;
+    min-width: 300px;
+    max-width: 450px;
+}
+
+.footer-map iframe {
+    width: 100%;
+    height: 250px;
+    border: 4px solid #2a5a8c;
+    border-radius: 4px;
+}
+
+.footer-bottom {
+    max-width: 1200px;
+    margin: 30px auto 0;
+    padding-top: 20px;
+    border-top: 1px solid #2a5a8c;
+    text-align: center;
+    font-size: 13px;
+    color: #888;
+}
+
+/* =========================================
+   10. RESPONSIVE (CELULARES)
+   ========================================= */
+@media (max-width: 768px) {
+    /* Header Logos */
+    .header-institucional {
+        gap: 20px;
+        padding: 15px 20px;
+        flex-direction: column;
+    }
+
+    .header-institucional img {
+        height: 40px;
+    }
+    
+    .header-institucional img.logo-ito {
+        height: 50px;
+    }
+
+    /* Navegación */
+    .nav-bar > ul {
+        flex-direction: column;
+    }
+
+    .nav-bar > ul > li > a {
+        padding: 12px;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    /* Hero */
+    .hero {
+        height: auto;
+        min-height: 300px;
+    }
+    
+    .hero img {
+        height: 300px;
+    }
+
+    .hero-overlay h1 {
+        font-size: 24px;
+    }
+    
+    .hero-overlay p {
+        font-size: 16px;
+    }
+
+    /* Footer */
+    .footer-content {
+        flex-direction: column;
+    }
+    
+    .footer-map {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    /* Convocatorias Header */
+    .convocatoria-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .convocatoria-toggle {
+        margin-left: 0;
+        margin-top: 10px;
+        width: 100%;
+    }
+
+    .convocatoria-header .tag {
+        margin-left: 0;
+        margin-top: 5px;
+        display: inline-block;
+    }
+
+    /* Asignaturas responsive */
+    .asignatura-list {
+        grid-template-columns: 1fr;
+    }
+    
+    .asignatura-bloque {
+        padding: 20px;
+    }
+}
+
+/* ===== ESTILOS PARA LA TABLA LGAC ===== */
+.lgac-section {
+    margin-top: 50px;
+}
+
+.lgac-section h3 {
+    color: #1a3a5c;
+    font-size: 22px;
+    margin-bottom: 20px;
+    border-left: 5px solid #e8a020;
+    padding-left: 15px;
+    font-weight: 700;
+}
+
+.tabla-lgac {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ccc;
+    font-family: 'Segoe UI', sans-serif;
+    margin-bottom: 40px;
+    background: #fff;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+}
+
+.tabla-lgac th {
+    background-color: #fff;
+    color: #1a3a5c;
+    font-weight: 700;
+    text-align: center;
+    padding: 15px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+}
+
+.tabla-lgac td {
+    padding: 15px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    vertical-align: middle;
+    line-height: 1.6;
+}
+
+.lgac-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 40px;
+}
+
+.lgac-item {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 0 8px 8px 0;
+    border-left: 5px solid #1a3a5c;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    display: grid;
+    grid-template-columns: 35% 1fr;
+    overflow: hidden;
+}
+
+.lgac-nombre {
+    padding: 20px 20px;
+    font-weight: 700;
+    color: #1a3a5c;
+    font-size: 15px;
+    line-height: 1.5;
+    border-right: 1px solid #eee;
+    display: flex;
+    align-items: center;
+}
+
+.lgac-perfil {
+    padding: 20px 20px 20px 25px;
+    color: #333;
+    font-size: 14px;
+    line-height: 1.6;
+    border-left: 4px solid #e8a020;
+    display: flex;
+    align-items: center;
+}
+
+/* ===== ESTILOS PARA LINEAS DE INVESTIGACION ===== */
+.lineas-section {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.lineas-section h3 {
+    color: #1a3a5c;
+    font-size: 24px;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #e8a020;
+    text-align: center;
+}
+
+.lineas-bloque {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-left: 5px solid #1a3a5c;
+    padding: 25px 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+    border-radius: 0 8px 8px 0;
+}
+
+.lineas-bloque h4 {
+    color: #1a3a5c;
+    font-size: 20px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e8a020;
+}
+
+.lineas-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.linea-item {
+    font-size: 14px;
+    color: #333;
+    padding: 6px 0 6px 12px;
+    border-left: 3px solid #e8a020;
+}
+
+@media (max-width: 768px) {
+    .lineas-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .lineas-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ===== BOTONES ACORDEON LGAC (Líneas de Investigación) ===== */
+.lgac-btn-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 40px;
+}
+
+.lgac-btn-item {
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+}
+
+.lgac-btn-titulo {
+    list-style: none;
+    background-color: #1a3a5c;
+    color: #fff;
+    font-weight: 700;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 16px 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.2s;
+}
+
+.lgac-btn-titulo::-webkit-details-marker { display: none; }
+
+.lgac-btn-titulo::after {
+    content: '▼';
+    font-size: 12px;
+    color: #e8a020;
+    transition: transform 0.3s;
+    flex-shrink: 0;
+    margin-left: 12px;
+}
+
+.lgac-btn-item[open] .lgac-btn-titulo {
+    background-color: #122a44;
+}
+
+.lgac-btn-item[open] .lgac-btn-titulo::after {
+    transform: rotate(-180deg);
+}
+
+
+.lgac-btn-desc {
+    background: #f5f8fc;
+    border-left: 5px solid #e8a020;
+    padding: 18px 22px;
+    font-size: 14px;
+    line-height: 1.8;
+    color: #333;
+}
+
+.lgac-btn-desc p { margin: 0; }
+
+/* ===== ESTILOS PARA LA SECCION DE ASIGNATURAS ===== */
+.asignaturas-section {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.asignaturas-section h3 {
+    color: #1a3a5c;
+    font-size: 24px;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #e8a020;
+    text-align: center;
+}
+
+.asignatura-bloque {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-left: 5px solid #1a3a5c;
+    padding: 25px 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+    border-radius: 0 8px 8px 0;
+}
+
+.asignatura-bloque h4 {
+    color: #1a3a5c;
+    font-size: 20px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e8a020;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.asignatura-bloque h4 .icono-basicas,
+.asignatura-bloque h4 .icono-optativas {
+    font-size: 24px;
+}
+
+.asignatura-intro {
+    margin-bottom: 20px;
+}
+
+.asignatura-intro p {
+    font-size: 15px;
+    color: #555;
+    text-align: justify;
+    margin-bottom: 10px;
+    line-height: 1.7;
+}
+
+.asignatura-intro p:last-child {
+    margin-bottom: 0;
+}
+
+.asignatura-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 12px;
+}
+
+.asignatura-list li {
+    padding: 12px 15px;
+    background: #f9f9f9;
+    border-left: 3px solid #e8a020;
+    color: #333;
+    font-size: 14px;
+    border-radius: 0 4px 4px 0;
+}
+
+/* ===== AREAS DE ASIGNATURAS OPTATIVAS ===== */
+.optativas-areas {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-top: 10px;
+}
+
+.optativa-area-item {
+    background: #f9f9f9;
+    border-left: 3px solid #e8a020;
+    border-radius: 0 6px 6px 0;
+    padding: 16px 18px;
+}
+
+.optativa-area-item h5 {
+    color: #1a3a5c;
+    font-size: 14px;
+    font-weight: 700;
+    margin: 0 0 8px;
+}
+
+.optativa-area-item p {
+    color: #555;
+    font-size: 13px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .optativas-areas {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* =========================================
+   12. ESTILOS DE PAGINA: CONTACTO
+   ========================================= */
+.contacto-section {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 30px;
+    flex: 1;
+}
+
+.contacto-section h2 {
+    color: #1a3a5c;
+    font-size: 28px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e8a020;
+}
+
+.contacto-section > p {
+    color: #555;
+    font-size: 15px;
+    margin-bottom: 30px;
+}
+
+.contacto-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 380px;
+    gap: 40px;
+    align-items: start;
+}
+
+@media (max-width: 850px) {
+    .contacto-wrapper {
+        grid-template-columns: 1fr;
+    }
+}
+
+.contacto-form {
+    background: #fff;
+    padding: 35px;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    border-top: 4px solid #1a3a5c;
+}
+
+.form-group {
+    margin-bottom: 22px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    color: #1a3a5c;
+    font-size: 14px;
+    margin-bottom: 7px;
+}
+
+.requerido {
+    color: #e8a020;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    font-family: 'Segoe UI', sans-serif;
+    color: #333;
+    transition: border-color 0.2s;
+    box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #1a3a5c;
+    box-shadow: 0 0 0 3px rgba(26,58,92,0.08);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 130px;
+}
+
+.btn-enviar {
+    background-color: #1a3a5c;
+    color: #fff;
+    border: none;
+    padding: 14px 35px;
+    font-size: 15px;
+    font-weight: 700;
+    border-radius: 5px;
+    cursor: pointer;
+    border-bottom: 3px solid #e8a020;
+    width: 100%;
+}
+
+.contacto-info {
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    border-top: 4px solid #e8a020;
+}
+
+.contacto-info h3 {
+    color: #1a3a5c;
+    font-size: 18px;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.info-item {
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+    margin-bottom: 22px;
+    padding-bottom: 22px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.info-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.info-icon {
+    font-size: 22px;
+    color: #e8a020;
+    flex-shrink: 0;
+    width: 30px;
+    text-align: center;
+}
+
+.info-item strong {
+    display: block;
+    color: #1a3a5c;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 4px;
+}
+
+.info-item p {
+    color: #555;
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.info-item a {
+    color: #2a5a8c;
+    text-decoration: none;
+}
+
+
+.contacto-foto-bloque {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    border-top: 4px solid #e8a020;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.contacto-foto-placeholder {
+    width: 100%;
+    height: 370px;
+    background-color: #d0d8e0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.contacto-foto-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.contacto-foto-img[src=""] {
+    display: none;
+}
+
+.contacto-foto-texto {
+    padding: 20px 25px;
+    color: #555;
+    font-size: 14px;
+    line-height: 1.7;
+    text-align: justify;
+    margin: 0;
+    border-top: 1px solid #f0f0f0;
+}
+
+/* =========================================
+   13. ESTILOS DE PAGINA: ACERVO
+   ========================================= */
+.acervo-section {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 30px;
+    flex: 1;
+}
+
+.acervo-section h2 {
+    color: #1a3a5c;
+    font-size: 28px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e8a020;
+}
+
+.acervo-section > p {
+    color: #555;
+    font-size: 15px;
+    margin-bottom: 30px;
+}
+
+.lista-investigacion {
+    list-style: disc;
+    padding-left: 25px;
+    margin-top: 20px;
+}
+
+.lista-investigacion li {
+    color: #333;
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 10px;
+}
+
+.tabla-acervo {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 40px;
+}
+
+.tabla-acervo thead th {
+    background-color: #1a3a5c;
+    color: #fff;
+    padding: 12px 15px;
+    text-align: left;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+    border-bottom: 4px solid #e8a020;
+    white-space: nowrap;
+}
+
+.tabla-acervo thead th:first-child {
+    text-align: center;
+}
+
+.tabla-acervo tbody td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 13px;
+    color: #333;
+    text-align: left;
+    vertical-align: middle;
+    word-break: break-word;
+}
+
+.tabla-acervo tbody td:first-child {
+    text-align: center;
+    font-weight: 700;
+    color: #1a3a5c;
+    white-space: nowrap;
+}
+
+.tabla-acervo tbody td:last-child {
+    text-align: center;
+}
+
+.acervo-estatus {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    white-space: nowrap;
+}
+
+.estatus-publicado {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.estatus-aceptado {
+    background-color: #cce5ff;
+    color: #004085;
+}
+
+.estatus-revision {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.estatus-concluido {
+    background-color: #e2e3e5;
+    color: #383d41;
+}
+
+.tabla-acervo tbody tr:last-child td {
+    border-bottom: none;
+}
+
+
+.acervo-num a {
+    display: inline-block;
+    background-color: #e8a020;
+    color: #fff;
+    font-weight: 700;
+    font-size: 14px;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    border-radius: 50%;
+    text-decoration: none;
+}
+
+.tabla-acervo-cuatrimestral tbody td:first-child {
+    text-align: center;
+    font-weight: 700;
+    color: #1a3a5c;
+}
+
+.tabla-acervo-cuatrimestral tbody td:nth-child(2) {
+    text-align: center;
+    font-weight: 600;
+    color: #555;
+}
+
+.tabla-acervo-cuatrimestral .col-cuatrimestre {
+    text-align: center;
+    width: 120px;
+}
+
+.tabla-acervo-cuatrimestral .acervo-num {
+    text-align: center;
+    color: #aaa;
+    font-size: 16px;
+}
+
+/* =========================================
+   14. ESTILOS DE PAGINA: NUCLEO ACADEMICO
+   ========================================= */
+.nucleo-section {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 30px;
+    flex: 1;
+}
+
+.nucleo-section h2 {
+    color: #1a3a5c;
+    font-size: 28px;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e8a020;
+}
+
+.seccion-subtitulo {
+    color: #1a3a5c;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #e8a020;
+}
+
+.nucleo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.academico-card {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    overflow: hidden;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.academico-card img {
+    width: 150px;
+    height: 230px;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+    margin: 20px auto 0;
+    border-radius: 4px;
+}
+
+.foto-placeholder {
+    width: 150px;
+    height: 230px;
+    background-color: #d0d8e0;
+    margin: 20px auto 0;
+    border-radius: 4px;
+}
+
+.academico-card h3 {
+    color: #1a3a5c;
+    font-size: 15px;
+    font-weight: 700;
+    margin: 15px 15px 8px;
+    line-height: 1.3;
+}
+
+.academico-titulo {
+    font-size: 13px;
+    color: #666;
+    margin: 2px 15px 8px;
+    font-style: italic;
+    line-height: 1.3;
+}
+
+.academico-correo {
+    font-size: 13px;
+    margin: 0 15px;
+    word-break: break-all;
+}
+
+.academico-correo a {
+    color: #2a5a8c;
+    text-decoration: none;
+}
+
+
+/* ── Divisor entre secciones de planta académica ── */
+.seccion-divisor {
+    max-width: 1200px;
+    margin: 50px auto 0;
+    padding: 0 30px;
+}
+
+.seccion-divisor hr {
+    border: none;
+    border-top: 2px solid #e0e0e0;
+    margin: 0 0 30px;
+}
+
+.seccion-divisor h2 {
+    color: #1a3a5c;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e8a020;
+}
+
+/* Grid de 2 columnas para secciones pequeñas */
+.nucleo-grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 30px 50px;
+}
+
+@media (max-width: 900px) {
+    .nucleo-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .nucleo-grid-2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 550px) {
+    .nucleo-grid {
+        grid-template-columns: 1fr;
+    }
+    .nucleo-grid-2 {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ── Links de semblanza en nombre del académico ── */
+.semblanza-link {
+    color: #1a3a5c;
+    text-decoration: none;
+    cursor: pointer;
+}

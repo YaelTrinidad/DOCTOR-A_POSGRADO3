@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git push upstream main)",
+      "Bash(git add \"semblanzas/CV_VICTOR_JIMENEZ.docx.pdf\" nucleo.html)",
+      "Bash(git commit:*)",
+      "Bash(git push origin main)",
+      "Bash(ping -n 3 github.com)",
+      "Bash(grep -l \"acervo\\\\|banco\\\\|Acervo\\\\|Banco\" \"C:\\\\Users\\\\merin\\\\OneDrive\\\\Escritorio\\\\DOCTOR-A_POSGRADO\"/*.html)"
+    ]
+  }
+}

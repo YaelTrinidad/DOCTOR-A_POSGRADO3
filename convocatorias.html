@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convocatorias - DCI - ITO</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="header-institucional">
+        <img src="img/logo-gobierno-mexico.png" alt="Gobierno de Mexico">
+        <img src="img/logo-educacion.png" alt="SEP">
+        <img src="img/logo-tecnm.png" alt="TecNM">
+        <img src="img/logo-ito.png" alt="ITO" class="logo-ito">
+        <img src="img/logo-posgrado.png" alt="Posgrado">
+    </header>
+
+    <nav class="nav-bar">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="plan.html">Plan de Estudios</a></li>
+            <li><a href="convocatorias.html" class="active">Convocatorias</a></li>
+            <li><a href="nucleo.html">Planta Académica</a></li>
+            <li><a href="egresados.html">Egresados</a></li>
+            <li class="nav-dropdown">
+                <a href="Investigación.html">Investigación</a>
+                <ul class="nav-submenu">
+                    <li><a href="acervo.html">Acervo</a></li>
+                    <li><a href="banco-proyectos.html">Banco de Proyectos</a></li>
+                </ul>
+            </li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <div class="convocatorias-container">
+        <h2>Convocatoria Doctorado</h2>
+
+        <div class="convocatoria-intro-texto">
+            <p>El <strong>Tecnológico Nacional de México</strong> a través del <strong>Instituto Tecnológico de
+                Oaxaca</strong> y la División de Estudios de Posgrado e Investigación <strong>CONVOCA</strong> a los
+                egresados de las Maestrías en Ciencias de la Ingeniería y Maestrías en Ingeniería afines a las carreras
+                de Ingeniería Química, Civil, Industrial, Telecomunicaciones, Electrónica, Eléctrica, Biomédica,
+                Mecánica y Sistemas Computacionales a participar en el proceso de selección para ingresar al</p>
+            <p style="text-align:center; font-size: 18px; font-weight: 700; color: #1a3a5c; margin: 12px 0;">
+                DOCTORADO EN CIENCIAS DE LA INGENIERÍA<br>
+            
+            </p>
+            <p>Este programa con orientación a la Investigación cuenta con reconocimiento en el <strong>Sistema
+                Nacional de Posgrados</strong> y se imparte en modalidad escolarizada con la Línea de Generación y
+                Aplicación del Conocimiento (LGAC):</p>
+            <ul>
+                <li><strong>Tecnologías de Información y Comunicaciones (TIC)</strong></li>
+            </ul>
+        </div>
+
+        <p>Seleccione cada apartado para desplegar la información detallada:</p>
+
+        <!-- OBJETIVO -->
+        <div class="convocatoria-card">
+            <div class="convocatoria-header" onclick="toggleConvocatoria('seccion-general')">
+                <h3>Objetivo del Programa</h3>
+                <button class="convocatoria-toggle" id="btn-seccion-general">Ver más</button>
+            </div>
+            <div class="convocatoria-body" id="seccion-general">
+                <p>Formar investigadores de alto nivel con competencias científicas y tecnológicas para generar,
+                    transmitir y aplicar conocimiento de frontera, formar recursos humanos y proponer soluciones a
+                    problemas en áreas prioritarias como salud, vivienda, cambio climático, agua, soberanía alimentaria,
+                    entre otras.</p>
+                <p>El programa promueve un enfoque multi, inter y transdisciplinario con responsabilidad social, ética
+                    y ambiental, alineado a los objetivos del Plan Nacional de Desarrollo (PND), el Plan México y los
+                    Objetivos de Desarrollo Sostenible de la Agenda 2030.</p>
+            </div>
+        </div>
+
+        <!-- PERFIL DE INGRESO -->
+        <div class="convocatoria-card">
+            <div class="convocatoria-header" onclick="toggleConvocatoria('seccion-ingreso')">
+                <h3>Perfil de Ingreso</h3>
+                <button class="convocatoria-toggle" id="btn-seccion-ingreso">Ver más</button>
+            </div>
+            <div class="convocatoria-body" id="seccion-ingreso">
+                <p>El programa está dirigido a egresados de Maestrías en Ciencias de la Ingeniería y Maestrías en
+                    Ingeniería afines a las carreras de Ingeniería Química, Civil, Industrial, Telecomunicaciones,
+                    Electrónica, Eléctrica, Biomédica, Mecánica y Sistemas Computacionales.</p>
+            </div>
+        </div>
+
+        <!-- PERFIL DE EGRESO -->
+        <div class="convocatoria-card">
+            <div class="convocatoria-header" onclick="toggleConvocatoria('seccion-egreso')">
+                <h3>Perfil de Egreso</h3>
+                <button class="convocatoria-toggle" id="btn-seccion-egreso">Ver más</button>
+            </div>
+            <div class="convocatoria-body" id="seccion-egreso">
+                <p>El (la) egresado(a) al terminar sus estudios, contará con los conocimientos y habilidades científicas
+                    y tecnológicas para:</p>
+                <ol>
+                    <li>Realizar investigación básica y aplicada orientada a la aportación de nuevos conocimientos y
+                        tecnologías en su campo de especialidad y a la resolución de problemas estratégicos.</li>
+                    <li>Proponer, emprender y liderar proyectos de desarrollo científico e innovación tecnológica con
+                        base en el bienestar social sustentable desde una perspectiva crítica y de responsabilidad
+                        tecnológica.</li>
+                    <li>Dar asesoría y consultoría técnica al sector público y privado en el área de su especialidad.</li>
+                    <li>Desempeñar actividades de docencia a nivel posgrado y licenciatura para contribuir a la
+                        formación de nuevos investigadores y especialistas técnicos con las capacidades para proponer
+                        soluciones éticas e innovadoras a problemas estratégicos.</li>
+                    <li>Realizar actividades de difusión, divulgación y transferencia universal del conocimiento, para
+                        el acceso a los resultados de los proyectos de posgrado y como impactan en la solución de
+                        problemas estratégicos.</li>
+                </ol>
+            </div>
+        </div>
+
+        <!-- REQUISITOS -->
+        <div class="convocatoria-card">
+            <div class="convocatoria-header" onclick="toggleConvocatoria('seccion-requisitos')">
+                <h3>Requisitos de Admisión</h3>
+                <button class="convocatoria-toggle" id="btn-seccion-requisitos">Ver más</button>
+            </div>
+            <div class="convocatoria-body" id="seccion-requisitos">
+                <ol>
+                    <li>Copia de título, cédula de maestría; el certificado deberá expresar el promedio obtenido, el
+                        cual debe ser mínimo de 8 u 80 según la escala oficial de calificaciones de la escuela de
+                        procedencia.</li>
+                    <li>Solicitud de admisión.</li>
+                    <li>Currículum Vitae (CV) con fotografía y documentos probatorios.</li>
+                    <li>Carta de exposición de motivos, dirigida al Claustro del Doctorado en Ciencias de la
+                        Ingeniería.</li>
+                    <li>Carta compromiso de dedicación a sus estudios.</li>
+                    <li>Dos cartas de recomendación con antigüedad no mayor a tres meses, emitidas por profesionales
+                        que no pertenezcan al Núcleo Académico (NA) del DCI, entregadas en sobre cerrado.</li>
+                    <li>Anteproyecto de investigación.</li>
+                    <li>2 fotografías tamaño infantil con adherible.</li>
+                    <li>Realizar su registro en línea:
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSe6PGXcqEJzEy8aLDK6e8Kfg28SUlax63-9b-AJfBjzGcUDMQ/viewform"
+                            target="_blank" style="color: #1a3a5c; font-weight: bold;">Formulario de Registro</a>
+                    </li>
+                    <li>Comprobante de pago por concepto de ficha.</li>
+                    <li>Presentar el examen de admisión.</li>
+                    <li>Presentarse a la entrevista con el comité de selección.</li>
+                    <li>Presentar evidencia de dominio de un segundo idioma.</li>
+                </ol>
+                <p style="margin-top: 15px; padding: 12px 15px; background-color: #f9f9f9; border-left: 4px solid #e8a020;">
+                    <strong>Descarga de formatos (CV, solicitud, carta de motivos, manifiesto):</strong><br>
+                    <a href="https://drive.google.com/drive/folders/1KNNdbs_OSgjsQ3fV0Jr4C4E_MYhpHvKE?usp=drive_link"
+                        target="_blank" style="color: #1a3a5c; font-weight: bold;">Carpeta de Formatos (Google
+                        Drive)</a>
+                </p>
+            </div>
+        </div>
+
+        <!-- CALENDARIO -->
+        <div class="convocatoria-card">
+            <div class="convocatoria-header" onclick="toggleConvocatoria('seccion-calendario')">
+                <h3>Calendario y Proceso de Admisión</h3>
+                <button class="convocatoria-toggle" id="btn-seccion-calendario">Ver más</button>
+            </div>
+            <div class="convocatoria-body" id="seccion-calendario">
+                <h4>Proceso de Admisión 2026</h4>
+                <table class="tabla-proceso">
+                    <thead>
+                        <tr>
+                            <th>Actividad</th>
+                            <th>Modalidad</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <strong>Pre-registro en línea y descarga de formatos</strong><br>
+                                (CV, solicitud, carta de motivos, manifiesto de no haber causado baja)<br>
+                                <a href="https://drive.google.com/drive/folders/1KNNdbs_OSgjsQ3fV0Jr4C4E_MYhpHvKE?usp=drive_link"
+                                    target="_blank" style="color: #1a3a5c; font-weight: bold;">Acceder a formatos</a>
+                            </td>
+                            <td>En línea</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Entrega presencial de documentos</strong><br>
+                                En la Coordinación del DCI: título, cédula, certificado, dominio de idioma, solicitud,
+                                CV, carta de motivos, manifiesto, fotografías, carta compromiso, 2 cartas de
+                                recomendación en sobre cerrado.
+                            </td>
+                            <td>Presencial en la Unidad Académica de Posgrado</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Envío del anteproyecto</strong><br>
+                                El anteproyecto se sube en versión electrónica al realizar el pre-registro.
+                            </td>
+                            <td>En línea</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Pago de ficha: $1,550.00 M.N.</strong><br>
+                                Se genera referencia una vez validados los documentos.
+                            </td>
+                            <td>En línea</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Entrega de referencia e impreso del comprobante bancario</strong><br>
+                                En la Coordinación del DCI.</td>
+                            <td>Presencial</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Entrega de ficha de aspirante</strong><br>
+                                Formalización de la solicitud.</td>
+                            <td>Presencial</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Examen de admisión (EXANIN-III)</strong></td>
+                            <td>Presencial en la Unidad Académica de Posgrado</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Entrevista con el comité de selección</strong></td>
+                            <td>Presencial en la Unidad Académica de Posgrado</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Publicación de la lista de aceptados</strong></td>
+                            <td>En línea</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Inscripción ($7,000 M.N.)</strong></td>
+                            <td>Presencial</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- CRITERIOS DE ACEPTACIÓN -->
+        <div class="convocatoria-card">
+            <div class="convocatoria-header" onclick="toggleConvocatoria('seccion-criterios')">
+                <h3>Criterios de Aceptación</h3>
+                <button class="convocatoria-toggle" id="btn-seccion-criterios">Ver más</button>
+            </div>
+            <div class="convocatoria-body" id="seccion-criterios">
+                <ul>
+                    <li>El puntaje obtenido en el examen de admisión.</li>
+                    <li>El puntaje obtenido en la evaluación del anteproyecto.</li>
+                    <li>El puntaje obtenido en la entrevista con el comité de selección.</li>
+                    <li>Certificado TOEFL con puntaje mínimo de <strong>450 puntos</strong>, o acreditación equivalente.
+                        <br><em>(La fecha de expedición no debe exceder dos años previos a la fecha de postulación.)</em>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- BANCO DE PROYECTOS -->
+        <div class="convocatoria-card">
+            <div class="convocatoria-header" onclick="toggleConvocatoria('seccion-proyectos')">
+                <h3>Banco de Proyectos (Anexo 1)</h3>
+                <button class="convocatoria-toggle" id="btn-seccion-proyectos">Ver más</button>
+            </div>
+            <div class="convocatoria-body" id="seccion-proyectos">
+                <p>La lista de proyectos ofertados se organiza en áreas estratégicas. Los postulantes también pueden
+                    proponer proyectos propios, sujetos a evaluación.</p>
+
+                <p class="proyecto-categoria">Salud</p>
+                <ul>
+                    <li>Aprendizaje automático para el análisis tiempo-frecuencia de biomarcadores de asimetría
+                        respiratoria orientado al desarrollo de un dispositivo para la detección no invasiva de la
+                        EPOC.</li>
+                    <li>Diseño de un sistema automático para la predicción de enfermedades cardiovasculares mediante el
+                        procesamiento de señales ECG y técnicas avanzadas de inteligencia artificial.</li>
+                    <li>Desarrollo de un sistema portátil de electroestimulación de bajo costo para la terapia
+                        miofascial y alivio del dolor en músculos largos de las piernas basado en análisis biomecánico
+                        y abordaje de puntos gatillo.</li>
+                    <li>Desarrollo de un sistema inteligente de adquisición multisensorial y retroalimentación
+                        interactiva para apoyar intervenciones terapéuticas en personas con Trastorno del Espectro
+                        Autista.</li>
+                </ul>
+
+                <p class="proyecto-categoria">Vivienda</p>
+                <ul>
+                    <li>Evaluación del cambio en parámetros climático-ambientales en la durabilidad del concreto
+                        aplicando técnicas de aprendizaje automático.</li>
+                </ul>
+
+                <p class="proyecto-categoria">Soberanía Alimentaria</p>
+                <ul>
+                    <li>Análisis geoespacial y evaluación multicriterio de la vivienda adecuada en ciudades intermedias
+                        con enfoque de sostenibilidad.</li>
+                </ul>
+
+                <p class="proyecto-categoria">Energía</p>
+                <ul>
+                    <li>Desarrollo de Sistemas de Coordinación de Protecciones Eléctricas Mediante Estrategias de
+                        Optimización.</li>
+                </ul>
+
+                <p class="proyecto-categoria">Agua</p>
+                <ul>
+                    <li>Tratamiento de aguas residuales por tecnologías emergentes y su optimización a través de la
+                        inteligencia artificial para el control de los compuestos potencialmente tóxicos.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- INDICACIONES PARA EL ANTEPROYECTO -->
+        <div class="convocatoria-card">
+            <div class="convocatoria-header" onclick="toggleConvocatoria('seccion-anteproyecto')">
+                <h3>Indicaciones para el Anteproyecto (Anexo 2)</h3>
+                <button class="convocatoria-toggle" id="btn-seccion-anteproyecto">Ver más</button>
+            </div>
+            <div class="convocatoria-body" id="seccion-anteproyecto">
+                <p>Seleccionar un solo tema de acuerdo con la línea de investigación.</p>
+
+                <h4>Estructura del Anteproyecto</h4>
+                <ol>
+                    <li>Portada</li>
+                    <li>Introducción</li>
+                    <li>Antecedentes</li>
+                    <li>Planteamiento del problema</li>
+                    <li>Justificación</li>
+                    <li>Objetivos (general y específicos)</li>
+                    <li>Marco Teórico</li>
+                    <li>Metodología</li>
+                    <li>Resultados esperados</li>
+                    <li>Cronograma de actividades</li>
+                    <li>Referencias</li>
+                </ol>
+
+                <h4>Formato</h4>
+                <ul>
+                    <li>Extensión máxima: <strong>20 cuartillas</strong>, numeradas.</li>
+                    <li>Interlineado: <strong>1.5</strong></li>
+                    <li>Fuente: <strong>Times New Roman o Arial, No. 12</strong></li>
+                    <li>Títulos y subtítulos en negritas.</li>
+                    <li>Iniciar cada apartado en una nueva hoja.</li>
+                    <li>Márgenes: superior 3 cm, inferior 3 cm, izquierdo 3 cm, derecho 2.5 cm.</li>
+                </ul>
+
+                <h4>La Portada Debe Incluir</h4>
+                <ul>
+                    <li>Nombre de la Institución, Campus, Departamento: Tecnológico Nacional de México, Instituto
+                        Tecnológico de Oaxaca, División de Estudios de Posgrado e Investigación.</li>
+                    <li>Programa de Doctorado en Ciencias de la Ingeniería.</li>
+                    <li>Tema seleccionado.</li>
+                    <li>Nombre completo del aspirante.</li>
+                    <li>Fecha de elaboración.</li>
+                </ul>
+
+                <p style="margin-top: 15px; padding: 12px 15px; background-color: #f9f9f9; border-left: 4px solid #e8a020;">
+                    Para más información: <strong>posgrado.ingenieria@itoaxaca.edu.mx</strong>
+                </p>
+            </div>
+        </div>
+
+        <!-- CONTACTO -->
+        <div class="convocatoria-card">
+            <div class="convocatoria-header" onclick="toggleConvocatoria('seccion-contacto')">
+                <h3>Información de Contacto</h3>
+                <button class="convocatoria-toggle" id="btn-seccion-contacto">Ver más</button>
+            </div>
+            <div class="convocatoria-body" id="seccion-contacto">
+                <p>Para mayor información sobre el proceso o el programa académico:</p>
+                <ul>
+                    <li><strong>Página Web:</strong> <a href="https://www.oaxaca.tecnm.mx/?page_id=360"
+                            target="_blank">www.oaxaca.tecnm.mx/posgrado</a></li>
+                    <li><strong>Correo electrónico:</strong> posgrado.ingenieria@itoaxaca.edu.mx</li>
+                    <li><strong>Ubicación:</strong> Unidad de Posgrado e Investigación, Instituto Tecnológico de
+                        Oaxaca.</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-info">
+                <h3>Instituto Tecnológico de Oaxaca</h3>
+                <p>Avenida Ing. Víctor Bravo Ahuja No. 125</p>
+                <p>Oaxaca de Juárez, Oaxaca, México</p>
+                <br>
+                <div class="contact-item">
+                    <span class="icon-label">Tel:</span><span>(951) 501 50 16</span>
+                </div>
+                <div class="contact-item">
+                    <span class="icon-label">Correo:</span><span>direccion@itoaxaca.edu.mx</span>
+                </div>
+            </div>
+            <div class="footer-map">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3814.116!2d-96.7145!3d17.0732!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85c7224ba205cc23%3A0x4e0e68a6e9b7e7d!2sInstituto%20Tecnol%C3%B3gico%20de%20Oaxaca!5e0!3m2!1ses!2smx!4v1700000000000!5m2!1ses!2smx"
+                    allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Instituto Tecnológico de Oaxaca</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleConvocatoria(id) {
+            var body = document.getElementById(id);
+            var btn = document.getElementById('btn-' + id);
+
+            if (body && btn) {
+                if (body.classList.contains('open')) {
+                    body.classList.remove('open');
+                    btn.textContent = 'Ver más';
+                } else {
+                    body.classList.add('open');
+                    btn.textContent = 'Ver menos';
+                }
+            }
+        }
+    </script>
+    <script src="nav.js"></script>
+</body>
+
+</html>
